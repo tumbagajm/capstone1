@@ -1,0 +1,180 @@
+/* Colors for my portfolio */
+:root {
+    --color-body: #b6cbce;
+    --color-heading: #eef3db;
+    --color-base: #033f47;
+    --color-base2: #022a30;
+    --color-brand: #e0f780;
+    --color-brand2: #deff58;
+    --sidbar-width: 240px;
+    --font-base: "Bai Jamjuree";
+
+    --color-main: #001f3f;
+}
+
+body {
+    background-color: var(--color-base2);
+    color: var(--color-body);
+    font-family: var(--font-base), sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--color-heading);
+    font-weight: 700;
+}
+
+
+/* Show the button when the user scrolls down */
+body.scrolled .back-to-top {
+    display: block;
+}
+
+/* Navbar Section */
+
+.navbar-custom {
+    background: linear-gradient(to right, var(--color-base), var(--color-base2));
+    border-bottom: 1px grey solid;
+}
+
+.navbar-nav .nav-item .nav-link {
+    font-weight: 600;
+    color: var(--color-body);
+    transition: all 0.4s ease;
+    font-size: 1rem;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: var(--color-brand);
+}
+
+.navbar-nav .nav-item .nav-link.active {
+    color: var(--color-brand);
+}
+
+.navbar-custom .navbar-brand {
+    color: var(--color-heading);
+    transition: color 0.3s ease;
+}
+
+
+/* Landing Section */
+#landing {
+    background: linear-gradient(to right, var(--color-base), var(--color-base2));
+}
+
+#landing .name,
+#landing .title,
+#landing .greetings {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0px;
+    color: var(--color-body);
+}
+
+#landing .aboutme {
+    color: var(--color-body);
+}
+
+.wave {
+    width: 100% !important;
+}
+
+/* Projects Section */
+.project-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Add smooth transitions for the hover effect */
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    /* Increase scale on hover for a subtle zoom effect */
+    box-shadow: 0 0 15px rgba(3, 63, 71, 1);
+    /* Add box shadow on hover for a lift effect */
+}
+
+/* For All Section Titles */
+.section-title {
+    display: inline-block;
+    border-bottom: 3px double var(--color-base);
+}
+
+
+#tools .container img {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#tools .container img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0 0 10px rgba(3, 63, 71, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#tools .container img:hover::before {
+    opacity: 1;
+}
+
+#tools .container img:hover {
+    transform: scale(1.05);
+}
+
+/* smaller image for web development section when screen is small */
+@media(max-width: 767px) {
+    #web-development img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+/* Contact Section */
+#contact {
+    color: var(--color-base2);
+}
+
+#contact .social-icon {
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+    color: var(--color-base2);
+}
+
+#contact .social-icon:hover {
+    color: #359ba8;
+    transform: scale(1.1);
+}
+
+#contact .btn-block {
+    width: 100%;
+    background-color: var(--color-base);
+    color: var(--color-body);
+}
+
+#contact .btn-block:hover {
+    background-color: var(--color-base2);
+}
+
+#contact .form-control:focus {
+    border-color: var(--color-base);
+    box-shadow: 0 0 0 0.2rem rgba(2, 42, 48, .25);
+}
+
+
+
+/* Footer Section */
+#footer {
+    background: linear-gradient(to right, var(--color-base), var(--color-base2));
+    color: var(--color-body);
+}
